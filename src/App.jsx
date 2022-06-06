@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Header, Footer } from "./components";
+import { Routes } from "./components";
 
 //TODO: Colocar un Logo cualquiera
 //TODO: Pasar todo esto a HomeView
@@ -11,15 +11,7 @@ import { Routes, Header, Footer } from "./components";
 //TODO: Probar distintos colores del header para que resalte en especial en la barra de busqueda
 
 const App = () => {
-  return (
-    <div className="">
-      <Header />
-      <main className="">
-        <Routes />
-      </main>
-      <Footer />
-    </div>
-  );
+  return <Routes />;
 };
 
 export default App;

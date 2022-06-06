@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import bannerImgUrl from "../../assets/banner2.jpg";
 
 import { Banner, ProductCard } from "../../components";
+import { Link } from "react-router-dom";
 
 const sections = ["shoes", "pants", "shirts"];
 const secProInitial = {
@@ -71,12 +72,12 @@ const HomeView = () => {
           >
             <div className="flex justify-between item-center">
               <h1 className="text-xl uppercase">{section}</h1>
-              <a
+              <Link
                 className="px-6 py-1 rounded-md bg-green-400 text-white"
-                href="#"
+                to={`/category/${section}`}
               >
                 See more
-              </a>
+              </Link>
             </div>
             <div className="flex justify-between items-center flex-wrap">
               {sectionedProductList[section]
