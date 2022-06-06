@@ -4,7 +4,7 @@ import { Footer, Header } from "../../components";
 
 export const LayoutView = () => {
   return (
-    <>
+    <div>
       <Header />
 
       <main>
@@ -12,6 +12,6 @@ export const LayoutView = () => {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 };

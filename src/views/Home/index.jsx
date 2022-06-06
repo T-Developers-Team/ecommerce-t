@@ -74,7 +74,8 @@ const HomeView = () => {
               <h1 className="text-xl uppercase">{section}</h1>
               <Link
                 className="px-6 py-1 rounded-md bg-green-400 text-white"
-                to={`/category/${section}`}
+                to={`category/${section}`}
+                state={{ products: sectionedProductList[section] }}
               >
                 See more
               </Link>

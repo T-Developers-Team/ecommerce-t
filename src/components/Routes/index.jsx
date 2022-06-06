@@ -18,11 +18,11 @@ const RoutesComponent = () => {
           path: "product/:id",
           element: <ProductView />,
         },
+        {
+          path: "category/:category",
+          element: <ProductsByCategoryView />,
+        },
       ],
-    },
-    {
-      path: "/category/:category",
-      element: <ProductsByCategoryView />,
     },
   ]);
 
