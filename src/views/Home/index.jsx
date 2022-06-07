@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { Banner, ProductCard } from "../../components";
 import { Link } from "react-router-dom";
 
+import pibaImgUrl from "../../assets/piba.jpg"
+import pibeImgUrl from "../../assets/pibe.png"
+
 const sections = ["shoes", "pants", "shirts"];
 const secProInitial = {
   shirts: [],
@@ -30,6 +33,8 @@ const HomeView = () => {
   const [sectionedProductList, setSectionedProductList] =
     useState(secProInitial);
 
+  const [products, setProducts] = useState([])
+
   useEffect(() => {
     const getProducts = async () => {
       const PRODUCTS_URL = "http://localhost:5000/api/products/";
@@ -49,6 +54,7 @@ const HomeView = () => {
 
       const sectionedProducts = sectioningProducts(productsData);
       console.log(sectionedProducts);
+      setProducts(productsData)
       setSectionedProductList(sectionedProducts);
     };
 
@@ -63,32 +69,36 @@ const HomeView = () => {
         subtitle="Subtitle"
         description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum consequuntur delectus soluta vel aliquid culpa, possimus, earum excepturi illo reprehenderit, iure amet sequi ea ullam eos consectetur odio mollitia nihil."
       />
-      <div className="flex flex-col bg-zinc-300 p-0 m-0">
-        {sections.map((section, index) => (
-          <section
-            id={section}
-            key={index}
-            className="flex flex-col min-h-screen w-full px-8 pt-28"
-          >
-            <div className="flex justify-between item-center">
-              <h1 className="text-xl uppercase">{section}</h1>
-              <Link
-                className="px-6 py-1 rounded-md bg-green-400 text-white"
-                to={`category/${section}`}
-                state={{ products: sectionedProductList[section] }}
-              >
-                Chaquet la mascota
-              </Link>
-            </div>
-            <div className="flex justify-between items-center flex-wrap">
-              {sectionedProductList[section]
-                .slice(0, 5)
-                .map((product, index) => (
-                  <ProductCard key={index} data={{ ...product }} />
-                ))}
-            </div>
-          </section>
-        ))}
+      <section className="flex flex-col items-center justify-center py-12">
+        <h3 className="text-3xl uppercase font-semibold">featured products</h3>
+        <div className="flex flex-wrap justify-center items-center">
+          {products.slice(0, 4).map((product, index) => <ProductCard key={index} data={product}/>)}
+        </div>
+      </section>
+
+      <div className="flex flex-col p-0 m-0 gap-10">
+        <section className="flex flex-col xl:flex-row">
+          <figure className="bg-blue-400 xl:w-2/3 overflow-hidden mb-8 xl:mb-0">
+            <img className="xl:float-right h-full xl:min-w-[1038px]" src={pibaImgUrl}/>
+          </figure>
+          <div className="xl:w-1/3 flex flex-col justify-center items-center">
+            <span className="bg-pink-500 text-white text-xl rounded-sm px-2 py-0.5">
+              THE BEST FOR WOMEN
+            </span>
+            {products.length > 0 && <ProductCard data={products[1]}/>}
+          </div>
+        </section>
+        <section className="flex flex-col xl:flex-row">
+          <figure className="bg-blue-400 xl:w-2/3 xl:order-last overflow-hidden mb-8 xl:mb-0">
+            <img className="xl:float-left h-full xl:min-w-[1038px]" src={pibeImgUrl}/>
+          </figure>
+          <div className="xl:w-1/3 flex flex-col justify-center items-center">
+            <span className="bg-blue-800 text-white text-xl rounded-sm px-2 py-0.5">
+              THE BEST FOR MEN
+            </span>
+            {products.length > 0 && <ProductCard data={products[2]}/>}
+          </div>
+        </section>
       </div>
     </>
   );

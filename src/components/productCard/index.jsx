@@ -15,7 +15,7 @@ const ProductCardComponent = ({
           <div className="font-bold text-lg lg:text-base truncate">{title}</div>
           <div className="font-bold text-green-600 text-2xl lg:text-xl">{`$ ${price}`}</div>
         </div>
-          <Link to={`/product/${_id}`} className="bg-green-500 text-white px-4 py-2 text-xs font-smibold rounded">Detail</Link>
+          <Link to={`/product/${_id}`} className="bg-green-500 text-white px-4 py-2 text-xs font-semibold rounded">Detail</Link>
       </div>
       <p className="text-gray-700 mb-4 text-base lg:text-sm text-ellipsis h-11 overflow-hidden">
         {desc}
