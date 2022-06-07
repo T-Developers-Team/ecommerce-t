@@ -1,5 +1,6 @@
-const CategoryChipComponent = ({ title }) => (
-  <span className="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">
+const CategoryChipComponent = ({ title, size = 'xs' }) => (
+  <span className={`inline-block bg-blue-500 rounded-full
+    px-2 py-1 font-semibold text-white mr-2 mb-2 text-${size} capitalize tracking-wider`}>
     #{title}
   </span>
 );

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import bannerImgUrl from "../../assets/banner2.jpg";
 
 import { Banner, ProductCard } from "../../components";
 import { Link } from "react-router-dom";
@@ -26,6 +25,7 @@ const sectioningProducts = (productList) => {
 
   return sectionedProducts;
 };
+
 const HomeView = () => {
   const [sectionedProductList, setSectionedProductList] =
     useState(secProInitial);
@@ -58,7 +58,7 @@ const HomeView = () => {
   return (
     <>
       <Banner
-        imgSrc={bannerImgUrl}
+        imgSrc={'banner'}
         title="Banner XXL"
         subtitle="Subtitle"
         description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum consequuntur delectus soluta vel aliquid culpa, possimus, earum excepturi illo reprehenderit, iure amet sequi ea ullam eos consectetur odio mollitia nihil."
@@ -77,7 +77,7 @@ const HomeView = () => {
                 to={`category/${section}`}
                 state={{ products: sectionedProductList[section] }}
               >
-                See more
+                Chaquet la mascota
               </Link>
             </div>
             <div className="flex justify-between items-center flex-wrap">

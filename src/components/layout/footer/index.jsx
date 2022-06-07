@@ -3,20 +3,20 @@ import { PrinterIcon, PhoneIcon, MailIcon, HomeIcon, ShoppingBagIcon } from '@he
 
 const FooterComponent = () => {
   return (
-    <footer class="text-center lg:text-left bg-gray-100 text-gray-600">
+    <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
 
-      <div class="flex justify-center items-center lg:justify-between px-8 py-4 border-b border-gray-300">
-        <div class="mr-12 hidden lg:block">
+      <div className="flex justify-center items-center lg:justify-between px-8 py-4 border-b border-gray-300">
+        <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
-        <div class="flex justify-center">
-          <a href="#!" class="mr-6 text-gray-600">
+        <div className="flex justify-center">
+          <a href="#!" className="mr-6 text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="facebook-f"
-              class="w-2.5"
+              className="w-2.5"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
@@ -27,13 +27,13 @@ const FooterComponent = () => {
               ></path>
             </svg>
           </a>
-          <a href="#!" class="mr-6 text-gray-600">
+          <a href="#!" className="mr-6 text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="twitter"
-              class="w-4"
+              className="w-4"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -44,13 +44,13 @@ const FooterComponent = () => {
               ></path>
             </svg>
           </a>
-          <a href="#!" class="mr-6 text-gray-600">
+          <a href="#!" className="mr-6 text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="google"
-              class="w-3.5"
+              className="w-3.5"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 488 512"
@@ -61,13 +61,13 @@ const FooterComponent = () => {
               ></path>
             </svg>
           </a>
-          <a href="#!" class="mr-6 text-gray-600">
+          <a href="#!" className="mr-6 text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="instagram"
-              class="w-3.5"
+              className="w-3.5"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -78,13 +78,13 @@ const FooterComponent = () => {
               ></path>
             </svg>
           </a>
-          <a href="#!" class="mr-6 text-gray-600">
+          <a href="#!" className="mr-6 text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="linkedin-in"
-              class="w-3.5"
+              className="w-3.5"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -95,13 +95,13 @@ const FooterComponent = () => {
               ></path>
             </svg>
           </a>
-          <a href="#!" class="text-gray-600">
+          <a href="#!" className="text-gray-600">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="github"
-              class="w-4"
+              className="w-4"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
@@ -114,10 +114,10 @@ const FooterComponent = () => {
           </a>
         </div>
       </div>
-      <div class="mx-8 py-8 text-center md:text-left">
-        <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="">
-            <h6 class="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
+      <div className="mx-8 py-8 text-center md:text-left">
+        <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="">
+            <h6 className="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
               <ShoppingBagIcon className="w-5 mr-3"/>
               CLOTHING STORE
             </h6>
@@ -126,83 +126,83 @@ const FooterComponent = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </p>
           </div>
-          <div class="">
-            <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+          <div className="">
+            <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
               Products
             </h6>
-            <p class="mb-4">
-              <a href="#!" class="text-gray-600">
+            <p className="mb-4">
+              <a href="#" className="text-gray-600">
                 Angular
               </a>
             </p>
-            <p class="mb-4">
-              <a href="#!" class="text-gray-600">
+            <p className="mb-4">
+              <a href="#" className="text-gray-600">
                 React
               </a>
             </p>
-            <p class="mb-4">
-              <a href="#!" class="text-gray-600">
+            <p className="mb-4">
+              <a href="#" className="text-gray-600">
                 Vue
               </a>
             </p>
             <p>
-              <a href="#!" class="text-gray-600">
+              <a href="#" className="text-gray-600">
                 Laravel
               </a>
             </p>
           </div>
-          <div class="">
-            <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+          <div className="">
+            <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
               Useful links
             </h6>
-            <p class="mb-4">
-              <a href="#!" class="text-gray-600">
+            <p className="mb-4">
+              <a href="#" className="text-gray-600">
                 Pricing
               </a>
             </p>
-            <p class="mb-4">
-              <a href="#!" class="text-gray-600">
+            <p className="mb-4">
+              <a href="#" className="text-gray-600">
                 Settings
               </a>
             </p>
-            <p class="mb-4">
-              <a href="#!" class="text-gray-600">
+            <p className="mb-4">
+              <a href="#" className="text-gray-600">
                 Orders
               </a>
             </p>
             <p>
-              <a href="#!" class="text-gray-600">
+              <a href="#" className="text-gray-600">
                 Help
               </a>
             </p>
           </div>
-          <div class="">
-            <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+          <div className="">
+            <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
               Contact
             </h6>
-            <p class="flex items-center justify-center md:justify-start mb-4">
+            <p className="flex items-center justify-center md:justify-start mb-4">
               <HomeIcon className="w-5 mr-4"/>
               New York, NY 10012, US
             </p>
-            <p class="flex items-center justify-center md:justify-start mb-4">
+            <p className="flex items-center justify-center md:justify-start mb-4">
               <MailIcon className="w-5 mr-4"/>
               info@example.com
             </p>
-            <p class="flex items-center justify-center md:justify-start mb-4">
+            <p className="flex items-center justify-center md:justify-start mb-4">
               <PhoneIcon className="w-5 mr-4"/>
               + 01 234 567 88
             </p>
-            <p class="flex items-center justify-center md:justify-start">
+            <p className="flex items-center justify-center md:justify-start">
               <PrinterIcon className="w-5 mr-4"/>
               + 01 234 567 89
             </p>
           </div>
         </div>
       </div>
-      <div class="text-center p-4 bg-gray-300">
+      <div className="text-center p-4 bg-gray-300">
         <span>Designed & Built: </span>
         <a
-          class="text-gray-600 font-semibold"
+          className="text-gray-600 font-semibold"
           href="https://tailwind-elements.com/"
         >
           T-Developers Team

@@ -1,9 +1,6 @@
-import { useHref, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
-
-  const navigate = useNavigate()
-  const { pathname } = useLocation()
 
   return (
   <header className="py-4 bg-gray-rgba backdrop-blur-sm fixed px-6 lg:px-8 z-20 w-screen">
@@ -12,28 +9,21 @@ const HeaderComponent = () => {
       <nav className="basis-1/3">
         <ul className="flex justify-between items-center w-96 mx-auto">
           <li>
-            <a
-              className="py-2 px-3 text-gray-700 hover:text-gray-400"
-              href={'#shirts'}
-            >
+            <Link className="py-2 px-3 text-gray-700 hover:text-gray-400" to="category/shirts">
               Shirts
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              className="py-2 px-3 text-gray-700 hover:text-gray-400"
-              href="#pants"
+            <Link className="py-2 px-3 text-gray-700 hover:text-gray-400" to={'/category/pants'}
             >
               Pants
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              className="py-2 px-3 text-gray-700 hover:text-gray-400"
-              href="#shoes"
+            <Link className="py-2 px-3 text-gray-700 hover:text-gray-400" to={'/category/shoes'}
             >
               Shoes
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
