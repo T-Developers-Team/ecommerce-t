@@ -20,28 +20,28 @@ const HeaderComponent = () => {
             <li>
               <Link
                 to={"category/shirts"}
-                class="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4  border-slate-700 text-slate-900"
+                className="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4  border-slate-700 text-slate-900"
               >
-                <span class="absolute w-0 h-0 transition-all duration-300 ease-out bg-slate-900 rounded-t-lg group-hover:w-full group-hover:h-10 opacity-10"></span>
-                <span class="relative">Shirts</span>
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-slate-900 rounded-t-lg group-hover:w-full group-hover:h-10 opacity-10"></span>
+                <span className="relative">Shirts</span>
               </Link>
             </li>
             <li>
               <Link
                 to={"category/pants"}
-                class="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4  border-slate-700 text-slate-900"
+                className="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4  border-slate-700 text-slate-900"
               >
-                <span class="absolute w-0 h-0 transition-all duration-300 ease-out bg-slate-900 rounded-t-lg group-hover:w-full group-hover:h-10 opacity-10"></span>
-                <span class="relative">Pants</span>
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-slate-900 rounded-t-lg group-hover:w-full group-hover:h-10 opacity-10"></span>
+                <span className="relative">Pants</span>
               </Link>
             </li>
             <li>
               <Link
                 to={"category/shoes"}
-                class="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4  border-slate-700 text-slate-900"
+                className="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4  border-slate-700 text-slate-900"
               >
-                <span class="absolute w-0 h-0 transition-all duration-300 ease-out bg-slate-900 rounded-t-lg group-hover:w-full group-hover:h-10 opacity-10"></span>
-                <span class="relative">Shoes</span>
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-slate-900 rounded-t-lg group-hover:w-full group-hover:h-10 opacity-10"></span>
+                <span className="relative">Shoes</span>
               </Link>
             </li>
           </ul>

@@ -1,43 +1,17 @@
 import { useState, useEffect } from "react";
-
 import { Banner, ProductCard } from "../../components";
-import { Link } from "react-router-dom";
+import { API_URL } from "../../utils/constants";
 
 import pibaImgUrl from "../../assets/piba.jpg"
 import pibeImgUrl from "../../assets/pibe.png"
 
-const sections = ["shoes", "pants", "shirts"];
-const secProInitial = {
-  shirts: [],
-  pants: [],
-  shoes: [],
-};
-const sectioningProducts = (productList) => {
-  const sectionedProducts = {
-    shirts: [],
-    pants: [],
-    shoes: [],
-  };
-
-  productList.map((product) => {
-    sections.map((section) => {
-      if (product.categories.includes(section))
-        sectionedProducts[section].push(product);
-    });
-  });
-
-  return sectionedProducts;
-};
-
 const HomeView = () => {
-  const [sectionedProductList, setSectionedProductList] =
-    useState(secProInitial);
 
   const [products, setProducts] = useState([])
 
   useEffect(() => {
     const getProducts = async () => {
-      const PRODUCTS_URL = "http://localhost:5000/api/products/";
+      const PRODUCTS_URL = `${API_URL}/products/`;
 
       const PRODUCTS_REQUEST_PARAMS = {
         metho: "GET",
@@ -51,11 +25,7 @@ const HomeView = () => {
 
       const response = await fetch(PRODUCTS_URL, PRODUCTS_REQUEST_PARAMS);
       const productsData = await response.json();
-
-      const sectionedProducts = sectioningProducts(productsData);
-      console.log(sectionedProducts);
       setProducts(productsData)
-      setSectionedProductList(sectionedProducts);
     };
 
     getProducts();

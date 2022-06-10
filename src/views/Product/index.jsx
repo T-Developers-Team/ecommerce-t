@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { CategoryChip } from "../../components";
+import { API_URL } from "../../utils/constants";
 
 const ProductView = () => {
   const { id } = useParams();
@@ -10,7 +11,7 @@ const ProductView = () => {
 
   useEffect(() => {
     const getProducts = async () => {
-      const PRODUCTS_URL = `http://localhost:5000/api/products/find/${id}`;
+      const PRODUCTS_URL = `${API_URL}/products/find/${id}`;
 
       const PRODUCTS_REQUEST_PARAMS = {
         metho: "GET",
