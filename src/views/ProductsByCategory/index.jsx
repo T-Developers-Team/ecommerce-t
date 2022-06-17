@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { Banner, ProductCard } from "../../components";
+import { API_URL } from "../../utils/constants";
 
 const ProductsByCategoryView = () => {
   const location = useLocation();
@@ -10,7 +11,7 @@ const ProductsByCategoryView = () => {
 
   useEffect(() => {
     const getProductsByCategory = async (category) => {
-      const PRODUCTS_URL = `http://localhost:5000/api/products?category=${category}`;
+      const PRODUCTS_URL = `${API_URL}/products?category=${category}`;
 
       const PRODUCTS_REQUEST_PARAMS = {
         metho: "GET",
